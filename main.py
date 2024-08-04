@@ -2,17 +2,6 @@ import pygame
 import defines
 import Vec2
 
-# def init():
-#     pygame.init()
-#     pygame.font.init()
-#     pygame.display.set_caption("Show Test")
-#     global screen
-#     screen = pygame.display.set_mode([defines.WIDTH, defines.HEIGHT])
-#     global timer
-#     timer = pygame.time.Clock()
-#     global font
-#     font = pygame.font.Font('freesansbold.ttf',32)
-    
 class Text:
     def __init__(self, name, id, color1, color2, position) -> None:
         self.name = name
@@ -57,18 +46,6 @@ class Game:
         self.timer = pygame.time.Clock()
         self.font = pygame.font.Font('freesansbold.ttf',32)
   
-
-    # def init():
-    #     pygame.init()
-    #     pygame.font.init()
-    #     pygame.display.set_caption("Show Test")
-    #     global screen
-    #     screen = pygame.display.set_mode([defines.WIDTH, defines.HEIGHT])
-    #     global timer
-    #     timer = pygame.time.Clock()
-    #     global font
-    #     font = pygame.font.Font('freesansbold.ttf',32)
-
     def add_circle(self, name, radius, color, position, velocity):
         self.id += 1
         ball = Ball(name,self.id,radius,color,position,velocity)
@@ -113,6 +90,9 @@ class Game:
         here is the check for colision 
         here is the change of the velocity due to gravity asceleration
         here should be the physics for elastic collide
+        
+        add speed when is it released by the mouse
+        
         """
         
         def asceleration():
